@@ -1,0 +1,60 @@
+﻿@model OnlineKhataApp.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Customer</h4>
+        <hr/>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomernName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomernName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AccountRecivable)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AccountRecivable)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MobileNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Region)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Region)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

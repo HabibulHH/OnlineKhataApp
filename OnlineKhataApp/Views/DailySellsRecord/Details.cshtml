@@ -1,0 +1,66 @@
+﻿@model OnlineKhataApp.Models.DailySellsRecord
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DailySellsRecord</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellOnCash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellOnCash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellsOnDue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellsOnDue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Collection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Collection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountRecivable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountRecivable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,82 @@
+﻿@model OnlineKhataApp.Models.DailyCashFlow
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DailyCashFlow</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyShopCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailyShopCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BariKhoroch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BariKhoroch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransportLabourCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransportLabourCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicLoanBankPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicLoanBankPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicCashIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicCashIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DailySells)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailySells)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

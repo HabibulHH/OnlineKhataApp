@@ -1,0 +1,56 @@
+﻿@model IEnumerable<OnlineKhataApp.Models.CustomersBuyingRecord>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            <div class="form-group">
+               
+                <div class="col-md-10">
+                    <select name="CustomerId" id="CustomerId" class="form-control">
+                        <option value="">Select...</option>
+                        @foreach (var customer in ViewBag.Customers)
+                        {
+                            <option value="@customer.CustomerId">@customer.CustomerId</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
